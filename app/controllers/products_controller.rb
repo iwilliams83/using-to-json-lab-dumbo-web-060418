@@ -30,12 +30,12 @@ class ProductsController < ApplicationController
     end
   end
 
-  def data
-    product = Product.find(params[:id])
-    # render json: ProductSerializer.serialize(product)
-    render json: product.to_json(only: [:id, :name, :description, :inventory, :price])
-    #to_json to serialize the Product. Only include the product id, name, description, inventory and price
-  end
+  # def data
+  #   product = Product.find(params[:id])
+  #   # render json: ProductSerializer.serialize(product)
+  #   render json: product.to_json(only: [:id, :name, :description, :inventory, :price])
+  #   #to_json to serialize the Product. Only include the product id, name, description, inventory and price
+  # end
 
   private
 
